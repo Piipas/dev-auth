@@ -9,7 +9,12 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "repository": "https://github.com/Pipas/dev-auth",
+  "homepage": "https://github.com/Pipas/dev-auth",
+  "author": {
+    "name": "Pipas",
+    "url": "https://x.com/pipas_dev"
+  },
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
