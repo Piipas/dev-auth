@@ -21,13 +21,10 @@
   "dependencies": {
     "minimist": "^1.2.8"
   },
-  "bin": "./dist/cli.js",
-  "pkg": {
-    "targets": [
-      "node18-linux-x64",
-      "node18-macos-x64",
-      "node18-win-x64"
-    ],
-    "outputPath": "dist"
+  "bin": {
+    "dev-auth": "./dist/cli.js"
+  },
+  "publishConfig": {
+      "access": "public"
   }
 }
