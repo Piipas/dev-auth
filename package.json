@@ -1,6 +1,6 @@
 {
   "name": "@pipas/dev-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A package that simplifies the authentication process for the development environment.",
   "main": "./dist/index.js",
   "bin": {
@@ -19,9 +19,9 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pipas/dev-auth"
+    "url": "https://github.com/piipas/dev-auth"
   },
-  "homepage": "https://github.com/Pipas/dev-auth",
+  "homepage": "https://github.com/piipas/dev-auth",
   "author": {
     "name": "Pipas",
     "url": "https://x.com/pipas_dev"
