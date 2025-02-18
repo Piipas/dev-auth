@@ -27,7 +27,7 @@
     "minimist": "^1.2.8"
   },
   "bin": {
-    "dev-auth": "./dist/cli.js"
+    "@pipas/dev-auth": "./dist/cli.js"
   },
   "publishConfig": {
       "access": "public"
