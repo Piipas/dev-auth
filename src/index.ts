@@ -1,4 +1,3 @@
-#! /usr/bin/node
 import minimist from "minimist";
 
 const processCommandOptions = async (args: minimist.ParsedArgs) => {
@@ -9,20 +8,24 @@ const processCommandOptions = async (args: minimist.ParsedArgs) => {
   const passwordFieldname = args["password-fieldname"];
   const tokenFieldname = args["token-fieldname"];
 
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      [loginFieldname]: String(login),
-      [passwordFieldname]: String(password),
-    }),
-  });
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        [loginFieldname]: String(login),
+        [passwordFieldname]: String(password),
+      }),
+    });
 
-  const data = await response.json();
-  const token = data?.[tokenFieldname];
+    const data = await response.json();
+    const token = data?.[tokenFieldname];
 
-  console.log(`Token of the user with username/email ${login}: `);
-  console.log("\x1b[32m%s\x1b[0m", token);
+    console.log(`Token of the user with username/email ${login}: `);
+    console.log("\x1b[32m%s\x1b[0m", token);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default processCommandOptions;
