@@ -1,15 +1,26 @@
 {
   "name": "@pipas/dev-auth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package that simplifies the authentication process for the development environment.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "bin": {
+    "dev-auth": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "tsx ./cli.ts",
-    "execute": "node ./dist/cli.js",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "repository": "https://github.com/Pipas/dev-auth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pipas/dev-auth"
+  },
   "homepage": "https://github.com/Pipas/dev-auth",
   "author": {
     "name": "Pipas",
@@ -21,15 +32,13 @@
     "@types/minimist": "^1.2.5",
     "@types/node": "^22.13.4",
     "prettier": "^3.5.1",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
   },
   "dependencies": {
     "minimist": "^1.2.8"
   },
-  "bin": {
-    "@pipas/dev-auth": "./dist/cli.js"
-  },
   "publishConfig": {
-      "access": "public"
+    "access": "public"
   }
 }
